@@ -30,3 +30,4 @@ RUN curl -sSL -O $WPCLI_PATH/$WPCLI_FILE && chmod +x $WPCLI_FILE
 # USER www-data
 
 ENTRYPOINT ["/wp-cli.phar"]
+CMD ["--allow-root","--help"]

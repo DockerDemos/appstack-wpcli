@@ -1,7 +1,7 @@
 appstack-wpcli
 ==============
 
-_v0.1 - 20141219_
+_v0.1.2 - 20141219_
 
 Docker image for building and running the excellent [WP-CLI](http://wp-cli.org) in a container.
 
@@ -13,7 +13,7 @@ Build the Image:
 2. Edit the Dockerfile to select the user your webserver runs as _(Optional)_
 2. `sudo docker build -t wpcli .`
 
-Use WP Cli:
+Use WP-CLI:
 
 Option 1 - Manage WordPress in a Docker container
 

@@ -3,9 +3,9 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iEYEABECAAYFAlSUSskACgkQte6EFif3vzdBgQCdEttDnM8V45+JrEkKiayPXzob
-b+MAoPfx12KbJKwzXQGuEUJyMIpjvGJ8
-=3cHn
+iEYEABECAAYFAlSUUKAACgkQte6EFif3vzc1PQCgmzg5DWLhXswg416AGWdfQPag
+kO8AoIJF4WpJVF7AGlM+viFORV3oZt2f
+=Jaaz
 -----END PGP SIGNATURE-----
 
 ```
@@ -17,10 +17,11 @@ b+MAoPfx12KbJKwzXQGuEUJyMIpjvGJ8
 #### Expect
 
 ```
-size  exec  file          contents                                                        
-            ./                                                                            
-942           Dockerfile  c5b4602e517d439ce3610b0719843886bd88dc35607475d09e74b2171823f75b
-2070          README.md   bcca8844f0ae1968c293c9a453182b6f02da04792af70deb02f32afda97e70b1
+size   exec  file          contents                                                        
+             ./                                                                            
+972            Dockerfile  0afd0db08f1e125d8734b4e295e4d76e820b9898cfa639c43af754b02a70a1f7
+35122          LICENSE     12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0
+2072           README.md   fc2fe25ba28ee87b615c88bf5435cde86bec15e186cdf784ba765126027c9231
 ```
 
 #### Ignore
