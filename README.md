@@ -1,7 +1,7 @@
 appstack-wpcli
 ==============
 
-_v0.1.2 - 20141219_
+_v0.1.3 - 20150105_
 
 Docker image for building and running the excellent [WP-CLI](http://wp-cli.org) in a container.
 
@@ -36,7 +36,8 @@ _Note:_ If you do not edit your Dockerfile to select the user your webserver wil
 
 ### Known Issues ###
 
-* No current mechanism for connecting to another database server
+* Unable to pass external database host info into container using ENV variables
+* URLs in the code drop a slash, breaking CSS/RSS, etc
 
 ### Acknowledgments ###
 
@@ -48,7 +49,7 @@ _Note:_ If you do not edit your Dockerfile to select the user your webserver wil
 
 The Dockerfile and related code, scripts or documentation in this repository is:
 
-Copyright (C) 2014 Chris Collins
+Copyright (C) 2014-2015 Chris Collins
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

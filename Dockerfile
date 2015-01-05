@@ -1,10 +1,10 @@
-FROM centos:centos7
+FROM centos:centos6
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 ENV WPCLI_PATH https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar
 ENV WPCLI_FILE wp-cli.phar
 ENV REPO http://dl.iuscommunity.org/pub/ius/stable/CentOS/\$releasever/\$basearch/
-ENV PKGS sudo curl php56u-cli
+ENV PKGS sudo curl php56u-cli php56u-mysql mysql
 
 RUN echo -e "\
 [ius]\n\
