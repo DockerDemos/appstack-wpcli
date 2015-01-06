@@ -3,9 +3,9 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iEYEABECAAYFAlSrCw8ACgkQte6EFif3vzdduwCg2wKDAiLkkoLwMQN1KEya8y8n
-/OgAoOu1OdOqNdFNDozqxvzMv31EFp69
-=KBnC
+iEYEABECAAYFAlSsVyIACgkQte6EFif3vzfw8QCfWLAdy+JheGxIROzphqK+fOwC
+4HQAnjmNAkX8h1XDf6GzSFKv+hiBIwH4
+=83EZ
 -----END PGP SIGNATURE-----
 
 ```
@@ -17,11 +17,15 @@ iEYEABECAAYFAlSrCw8ACgkQte6EFif3vzdduwCg2wKDAiLkkoLwMQN1KEya8y8n
 #### Expect
 
 ```
-size   exec  file          contents                                                        
-             ./                                                                            
-991            Dockerfile  6d651abe66523a1aa36accc86a9ff607294aed60225ef72c2099b67b77490c9c
-35122          LICENSE     12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0
-2147           README.md   22a102f2a67f44c497617ceab68d3d46b4d3dd70d5a6ca99741f38aa917a3934
+size   exec  file                  contents                                                        
+             ./                                                                                    
+1193           Dockerfile          12846893aa75e97428a24be56c4e8ad61eb827c67c08b13a77f660858e665df9
+35122          LICENSE             12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0
+2147           README.md           22a102f2a67f44c497617ceab68d3d46b4d3dd70d5a6ca99741f38aa917a3934
+               scripts/                                                                            
+282    x         core-config.sh    7d4cc8c11244dcc94bcb1fb1f4ca9899e40f124c7cf7e3603542f1320330a103
+82     x         core-download.sh  e9ee3f5e6f430e242b8e66cbf83708fea42808c90e5913cbddeca196581b1e3a
+199    x         core-install.sh   6be37fa4cbdb5b720650d2f1fc07ff14997fb2585a097f72c2d5cf6b6a364be2
 ```
 
 #### Ignore

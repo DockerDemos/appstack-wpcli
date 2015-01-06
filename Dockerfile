@@ -16,7 +16,10 @@ priority=1\n\
 " >> /etc/yum.repos.d/ius.repo
 
 RUN yum install -y $PKGS && yum clean all
+WORKDIR /bin
 RUN curl -sSL -O $WPCLI_PATH/$WPCLI_FILE && chmod +x $WPCLI_FILE
+RUN ln -s $WPCLI_FILE wp
+WORKDIR /
 
 # Uncomment the relevant lines below to make wp-cli run as the Apache user
 # Pick the Distro that your Webserver is running in (not this Docker image)
@@ -29,5 +32,12 @@ RUN curl -sSL -O $WPCLI_PATH/$WPCLI_FILE && chmod +x $WPCLI_FILE
 # RUN useradd -u 33 -U --home /var/www/ -M --shell /sbin/nologin www-data
 # USER www-data
 
-ENTRYPOINT ["/wp-cli.phar"]
-CMD ["--allow-root","--help"]
+RUN mkdir ~/.wp-cli && echo -e "\
+core config:\n\
+    extra-php: |\n\
+        define( 'FORCE_SSL_ADMIN', true);\n\
+" >> ~/.wp-cli/config.yml
+
+ADD scripts /scripts
+
+CMD [ "wp-cli.phar", "--allow-root", "--help" ]
