@@ -3,8 +3,9 @@ MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 ENV WPCLI_PATH https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar
 ENV WPCLI_FILE wp-cli.phar
+ENV WP_UPGRADE_SCRIPT https://gist.github.com/682edb10de8d1002f1e1.git
 ENV REPO http://dl.iuscommunity.org/pub/ius/stable/CentOS/\$releasever/\$basearch/
-ENV PKGS sudo curl php56u-cli php56u-mysql mysql
+ENV PKGS sudo git curl php56u-cli php56u-mysql mysql
 
 RUN echo -e "\
 [ius]\n\
@@ -39,5 +40,7 @@ core config:\n\
 " >> ~/.wp-cli/config.yml
 
 ADD scripts /scripts
+RUN git clone $WP_UPGRADE_SCRIPT /tmp/clone && mv /tmp/clone/wp-upgrade.sh /scripts
+RUN chmod -R +x /scripts
 
 CMD [ "wp-cli.phar", "--allow-root", "--help" ]
