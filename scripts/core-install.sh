@@ -2,8 +2,8 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-source ${DIR}/defaults
 source ${DIR}/shared
+source ${DIR}/defaults
 
 EXTRAS="$@"
 
@@ -19,6 +19,9 @@ if [[ $INSTALL_DEFAULT_PLUGINS == false ]] ; then
 else
   for PLUGIN in $DEFAULT_PLUGINS ; do
     $WPCMD plugin install $PLUGIN
+  done
+  for PLUGIN in $DEFAULT_ACTIVATED_PLUGINS ; do
+    $WPCMD plugin install --activate $PLUGIN
   done
 fi
 if [[ $INSTALL_DEFAULT_THEMES == false ]] ; then
