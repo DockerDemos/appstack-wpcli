@@ -18,16 +18,16 @@ if [[ $INSTALL_DEFAULT_PLUGINS == false ]] ; then
   f_info "Skipping default plugins on user request"
 else
   for PLUGIN in $DEFAULT_PLUGINS ; do
-    $WPCMD plugin install $PLUGIN
+    $WPCMD plugin install $PLUGIN | tee $LOGFILE
   done
   for PLUGIN in $DEFAULT_ACTIVATED_PLUGINS ; do
-    $WPCMD plugin install --activate $PLUGIN
+    $WPCMD plugin install --activate $PLUGIN | tee $LOGFILE
   done
 fi
 if [[ $INSTALL_DEFAULT_THEMES == false ]] ; then
   f_info "Skipping default themes on user request"
 else
   for THEME in $DEFAULT_THEMES ; do
-    $WPCMD theme install $THEME
+    $WPCMD theme install $THEME | tee $LOGFILE
   done
 fi
