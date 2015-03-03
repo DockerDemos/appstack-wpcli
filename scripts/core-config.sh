@@ -1,10 +1,12 @@
 #!/bin/bash
 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 EXTRAS="$@"
 DBNAME="$(awk '/name/ {print $2}' /root/.secret/dbdata.yaml)"
 DBPASS="$(awk '/mysql/ {print $2}' /root/.secret/dbdata.yaml)"
 
-source shared
+source ${DIR}/shared
 
 f_open_logfile
 

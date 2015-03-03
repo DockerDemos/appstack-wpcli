@@ -1,7 +1,9 @@
 #!/bin/bash
 
-source defaults
-source shared
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source ${DIR}/defaults
+source ${DIR}/shared
 
 EXTRAS="$@"
 

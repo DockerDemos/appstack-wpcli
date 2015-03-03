@@ -3,9 +3,9 @@
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iEYEABECAAYFAlT16YMACgkQte6EFif3vzfofQCfVohtJIc/zsoh4w9TAQzXe0C8
-fVEAoPkIaHBLrVRTv2xYQk10JQdoauzB
-=Ouqu
+iEYEABECAAYFAlT17tsACgkQte6EFif3vzfY4gCgsWJciS4Nh0JHCs4RdrCiS/zK
+o5UAoNxiimuUm4cCbLCfqwldlfhnEiiE
+=Kn1P
 -----END PGP SIGNATURE-----
 
 ```
@@ -23,9 +23,9 @@ size   exec  file                  contents
 35122          LICENSE             12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0
 2147           README.md           22a102f2a67f44c497617ceab68d3d46b4d3dd70d5a6ca99741f38aa917a3934
                scripts/                                                                            
-315    x         core-config.sh    313e7fd63d2bf65af991d6a15a39cea4f011ea44deee4e1e42b46243281443d4
-143    x         core-download.sh  c843ffc546f80184b8c7a81dc906b7fe3db359e014d07baec4590de14ad1e4ba
-620    x         core-install.sh   bc9affe9c05abca421f834d9a798db0c54167a949bb046b344e599ec2b241366
+377    x         core-config.sh    37d080040b071e52a70b645bfd44d74e1d3f659154f0fdce5760aa7f92cb44e1
+205    x         core-download.sh  2d98c9dbcd7f1ea860826127da37513a76d8412c866a0e68d5077146393574fb
+689    x         core-install.sh   9a5f61a9d04bb5020fae6c5699680e86786b7249052a3e443fec43cc67e92304
 117              defaults          6bcbfcf8fc372c7741666acb4da69ae9f23a382cda307652ce4b940d30be086f
 737              shared            714a5550e148e834b1dd49472b8684d5c13108bd5d71f628fe4ac539c6b8f9b5
 ```
