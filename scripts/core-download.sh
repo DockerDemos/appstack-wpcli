@@ -1,16 +1,13 @@
 #!/bin/bash
 
-source functions.sh
+source shared
 
 EXTRAS="$@"
 
-if [[ ! -f $LOGFILE ]] ; then
-  touch $LOGFILE || f_warn "Unable to open ${LOGFILE}"
-  echo "$(date '+%Y-%m-%dT%H:%M') - Logfile opened" >> $LOGFILE
-fi
+f_open_logfile 
 
-cd /var/www/html
+cd $WORKDIR
 
 f_check_cms | tee $LOGFILE
 
-wp core download --allow-root $EXTRAS | tee $LOGFILE
+$WPCMD core download $EXTRAS | tee $LOGFILE

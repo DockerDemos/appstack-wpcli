@@ -1,10 +1,10 @@
-#!/bin/bash
-
 LOGFILE="/var/log/wpcli.log"
 
+WORKDIR="/var/www/html"
 WPCONF="wp-config.php"
 PINDEX="index.php"
 HINDEX="index.html"
+WPCMD="wp --allow-root "
 
 f_err () {
   echo "$(date '+%Y-%m-%dT%H:%M') - $1"
@@ -14,6 +14,17 @@ f_err () {
 f_warn () {
   echo "$(date '+%Y-%m-%dT%H:%M') - $1"
   exit 0
+}
+
+f_info () {
+  echo "$(date '+%Y-%m-%dT%H:%M') - $1"
+}
+
+f_open_logfile () {
+  if [[ ! -f $LOGFILE ]] ; then
+    touch $LOGFILE || f_warn "Unable to open ${LOGFILE}"
+    echo "$(date '+%Y-%m-%dT%H:%M') - Logfile opened" >> $LOGFILE
+  fi
 }
 
 f_check_cms () {
