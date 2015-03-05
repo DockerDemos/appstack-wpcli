@@ -30,4 +30,7 @@ else
   for THEME in $DEFAULT_THEMES ; do
     $WPCMD theme install $THEME | tee $LOGFILE
   done
+  if [[ ! -z $DEFAULT_ACTIVATED_THEME ]] ; then
+    $WPCMD theme activate $DEFAULT_ACTIVATED_THEME | tee $LOGFILE
+  fi
 fi
