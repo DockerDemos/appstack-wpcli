@@ -3,8 +3,8 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 EXTRAS="$@"
-DBNAME="$(awk '/name/ {print $2}' /root/.secret/dbdata.yaml)"
-DBPASS="$(awk '/mysql/ {print $2}' /root/.secret/dbdata.yaml)"
+DBNAME="$(awk '/name/ {print $2}' /conf/.creds/dbdata.yaml)"
+DBPASS="$(awk '/mysql/ {print $2}' /conf/.creds/dbdata.yaml)"
 
 source ${DIR}/shared
 
