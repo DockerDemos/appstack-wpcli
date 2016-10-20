@@ -1,4 +1,4 @@
-FROM centos:centos6
+FROM centos:centos7
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
 ENV WPCLI_PATH https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar
@@ -43,4 +43,5 @@ ADD scripts /scripts
 RUN git clone $WP_UPGRADE_SCRIPT /tmp/clone && mv /tmp/clone/wp-upgrade.sh /scripts
 RUN chmod -R +x /scripts
 
-CMD [ "wp-cli.phar", "--allow-root", "--help" ]
+ENTRYPOINT [ "/bin/wp" ]
+CMD [ "--allow-root", "--help" ]
